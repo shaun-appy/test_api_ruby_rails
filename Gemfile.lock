@@ -38,14 +38,25 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    addressable (2.4.0)
     arel (7.1.1)
     builder (3.2.2)
     byebug (9.0.5)
     concurrent-ruby (1.0.2)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
+    database_cleaner (1.5.3)
+    diff-lcs (1.2.5)
     erubis (2.7.0)
+    factory_girl (4.7.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.7.0)
+      factory_girl (~> 4.7.0)
+      railties (>= 3.0.0)
     ffi (1.9.14)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
+    hashdiff (0.3.0)
     i18n (0.7.0)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -96,6 +107,26 @@ GEM
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
+    rspec-core (3.5.3)
+      rspec-support (~> 3.5.0)
+    rspec-expectations (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-mocks (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-rails (3.5.2)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 3.5.0)
+      rspec-expectations (~> 3.5.0)
+      rspec-mocks (~> 3.5.0)
+      rspec-support (~> 3.5.0)
+    rspec-support (3.5.0)
+    safe_yaml (1.0.4)
+    shoulda-matchers (3.1.1)
+      activesupport (>= 4.0.0)
     spring (1.7.2)
     spring-watcher-listen (2.0.0)
       listen (>= 2.7, < 4.0)
@@ -112,6 +143,10 @@ GEM
     thread_safe (0.3.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    webmock (2.1.0)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff
     websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -121,13 +156,18 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  database_cleaner
+  factory_girl_rails
   listen (~> 3.0.5)
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
+  rspec-rails
+  shoulda-matchers
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
   tzinfo-data
+  webmock
 
 BUNDLED WITH
    1.12.5
